@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Report Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .report-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Analysis Report Input</h1>
+        <form method="POST">
+            <div class="report-title">CERTIFICATE OF ANALYSIS</div>
+
+            <label for="ar_no">A.R. No.:</label>
+            <input type="text" name="ar_no" required>
+
+            <label for="date">Date:</label>
+            <input type="date" name="date" required>
+
+            <label for="product">Product:</label>
+            <input type="text" name="product" required>
+
+            <label for="analysed_on">Analysed On:</label>
+            <input type="date" name="analysed_on" required>
+
+            <!-- <label for="purchaser">Purchaser:</label>
+            <input type="text" name="purchaser" required> -->
+
+            <label for="purchaser">Purchaser:</label>
+            <select name="purchaser" required>
+                <option value="" disabled selected>Select a purchaser</option>
+                <option value="KASHYAP SWEETNERS LTD.">KASHYAP SWEETNERS LTD.</option>
+                <option value="ABC INDUSTRIES">ABC INDUSTRIES</option>
+                <option value="XYZ CORPORATION">XYZ CORPORATION</option>
+                <option value="LMN TRADING CO.">LMN TRADING CO.</option>
+                <!-- Add more options as needed -->
+            </select>
+
+
+            <label for="batch_no">Batch No.:</label>
+            <input type="text" name="batch_no" required>
+
+            <label for="po_no">P.O. No.:</label>
+            <input type="text" name="po_no" required>
+
+            <label for="po_date">P.O. Date:</label>
+            <input type="date" name="po_date" required>
+
+            <label for="qty_ordered">Qty Ordered:</label>
+            <input type="number" name="qty_ordered" required>
+
+            <label for="qty_dispatched">Qty Dispatched:</label>
+            <input type="number" name="qty_dispatched" required>
+
+
+            <input type="submit" value="Generate Report">
+        </form>
+    </div>
+</body>
+</html>
